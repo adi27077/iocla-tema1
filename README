@@ -1,0 +1,57 @@
+*Musat-Burcea Adrian 322CB*
+IOCLA Tema 1
+
+Am pornit mai intai cu alocarea de memorie pt sirurile si structurile folosite
+si am initializat directorul home. Dupa aceea se citeste fiecare linie si se 
+separa comanda si argumentele.
+
+touch:
+verifica mai intai daca exista lista de fisiere, daca nu o creeaza si adauga
+primul fisier. Daca exista deja lista, atunci fisierul nou se adauga la 
+sfarsit(in caz ca nu exista deja)
+
+mkdir:
+similar cu touch
+
+ls:
+parcurge mai intai lista de directoare si le afiseaza(daca exista), iar apoi
+lista de fisiere si le afiseaza (daca exista)
+
+rm:
+verifica mai intai daca lista de fisiere exista, apoi cauta fisierul in lista.
+Daca este primul se actualizeaza adresa de inceput a listei. Dupa ce fisierul
+este gasit si sunt actualizate legaturile, se elibereaza memoria lui. Daca s-a
+parcurs lista si nu s-a gasit inseamna ca nu exista
+
+rmdir:
+similar cu rm, doar ca atunci cand se sterge un director se apeleaza functiile
+de eliberare memorie pt a sterge si tot ce se afla in acel director
+
+cd:
+verifica mai intai cazul ".." si schimba directorul curent la parinte. Dupa,
+se verifica daca exista directoare in cel curent. Daca exista, se cauta cel dat
+si se schimba adresa directorului curent cand se gaseste.
+
+pwd:
+porneste de la directorul curent si creeaza sirul caii concatenand la 
+inceputul acestuia numele directorului curent, pana se ajunge la directorul
+parinte "home". 
+
+tree:
+daca exista directoare, afiseaza numele directorului curent se apeleaza recursiv
+pentru toate subdirectoarele. Dupa ce se afiseaza directoarele din cel curent
+se afiseaza fisierele
+
+mv:
+verifica mai intai daca exista listele de directoare/fisiere si daca exista deja
+directoare sau fisiere cu numele nou. Dupa aceea se ia cazul in care se 
+redenumeste directorul. Daca este singurul din lista pur si simplu i se schimba
+numele. Altfel se procedeaza similar cu rm, doar ca inloc sa se elibereze
+memoria directorului gasit, se salveaza adresa lui si se pune la sfarsit.
+La fel si procedeaza si in cazul fisierelor.
+
+stop:
+elibereaza memoria folosind functiile recursive freeFile si freeDir, elibereaza
+memoria ocupata de siruri si iese din do...while
+
+PS: nu stiam ca lui Costel Biju ii place linuxul
